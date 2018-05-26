@@ -16,8 +16,8 @@ function startTimer() {
 
 function restartTimer() {
     return {
-        typs: RESTART_TIMER
-    };
+        type: RESTART_TIMER
+    }
 }
 
 function addSecond() {
@@ -61,7 +61,7 @@ function applyStartTimer(state) {
 function applyRestartTimer(state) {
     return {
         ...state,
-        isPlaying: true,
+        isPlaying: false,
         elapsedTime: 0
     }
 }
@@ -87,6 +87,8 @@ const actionCreators = {
     restartTimer,
     addSecond
 }
+
+export { actionCreators };
 
 // Export Reducer
 
