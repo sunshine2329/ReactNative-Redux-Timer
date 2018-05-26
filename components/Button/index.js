@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { View, TouchableOpacity, StyleSheet } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
-function Button({iconName, onPress}) {
-    return (
-        <TouchableOpacity onPress={onPress}>
-            <FontAwesome name={iconName} size={80} color="white" />
+function Button({ iconName, onPress }) {
+    return ( 
+        <TouchableOpacity onPressOut={onPress}>
+            <FontAwesome name={iconName} size={80} color="white" / >
         </TouchableOpacity>
     )
 }
